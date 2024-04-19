@@ -5,9 +5,69 @@
 <PageTitle>
     Add new Objective
 </PageTitle>
+<div class="row justify-content-center">
+    <div class="col-6">
+        <EditForm Enhance=true method="post" FormName="AddObjectiveForm" OnValidSubmit="AddObjective" Model="objective" autocomplete="off">
+            <h3>
+                Add Objective
+            </h3>
 
+            <div class="mb-3">
+                <label for="title" class="form-label">
+                    Title
+                </label>
+                <InputText id="title" @bind-Value="objective.Title" class="form-control shadow-none"/>
+            </div>
+
+            <div class="mb-3">
+                <label for="due-date" class="form-label">
+                    Date Due
+                </label>
+                <InputDate id="due-date" @bind-Value="objective.DueDate" class="form-control shadow-none"/>
+            </div>
+
+            <div class="mb-3">
+                <label for="priority" class="form-label">
+                    Priority
+                </label>
+                <InputSelect id="priority" @bind-Value="objective.Priority" class="form-control shadow-none">
+                    <option value="0">
+                        Select Priority
+                    </option>
+                    @foreach (var priority in Enum.GetValues(typeof(Priority)))
+                    {
+                        <option value="@priority">
+                            @priority.ToString()
+                        </option>
+                    }
+                </InputSelect>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-primary shadow-none">
+                    Submit
+                </button>
+                <a href="/" class="btn btn-secondary shadow-none ms-3">
+                    Return to DashBoard
+                </a>
+            </div>
+            <DataAnnotationsValidator/>
+            <ValidationSummary/>
+
+        </EditForm>
+    </div>
+</div>
 
 
 @code {
+    [SupplyParameterFromForm]
+    public Objective objective { get; set; } = new();
+
+    private async Task AddObjective()
+    {
+        await ObjectiveRepository.AddAsync(objective);
+        Navigation.NavigateTo("/");
+    }
+
 
 }

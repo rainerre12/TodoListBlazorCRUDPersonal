@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListBlazorCRUD.Domain", "TodoListBlazorCRUD.Domain\TodoListBlazorCRUD.Domain.csproj", "{2A95E58E-EE55-4725-BEB2-8143CA150171}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListBlazorCRUD.Domain", "TodoListBlazorCRUD.Domain\TodoListBlazorCRUD.Domain.csproj", "{2A95E58E-EE55-4725-BEB2-8143CA150171}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListBlazorCRUD.Application", "TodoListBlazorCRUD.Application\TodoListBlazorCRUD.Application.csproj", "{B3F2DFDF-BA7C-42C3-8085-3E0A63D1C563}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListBlazorCRUD.Application", "TodoListBlazorCRUD.Application\TodoListBlazorCRUD.Application.csproj", "{B3F2DFDF-BA7C-42C3-8085-3E0A63D1C563}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListBlazorCRUD.Infastructure", "TodoListBlazorCRUD.Infastructure\TodoListBlazorCRUD.Infastructure.csproj", "{97219CBF-0ED3-4470-AA42-D63C1B6A4556}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListBlazorCRUD.Infastructure", "TodoListBlazorCRUD.Infastructure\TodoListBlazorCRUD.Infastructure.csproj", "{97219CBF-0ED3-4470-AA42-D63C1B6A4556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListBlazorCRUD", "TodoListBlazorCRUD\TodoListBlazorCRUD.csproj", "{D4FD222C-83C4-4CB5-B205-EC93F076E0AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListBlazorCRUD", "TodoListBlazorCRUD\TodoListBlazorCRUD.csproj", "{D4FD222C-83C4-4CB5-B205-EC93F076E0AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

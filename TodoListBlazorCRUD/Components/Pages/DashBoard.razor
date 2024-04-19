@@ -21,6 +21,7 @@
             @foreach (var objective in objectives)
             {
                 <div class="objective-item">
+                    <ObjectiveCard @rendermode="InteractiveServer" Objective="objective"/>
                 </div>
             }
         }

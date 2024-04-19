@@ -65,6 +65,7 @@
 
     private async Task AddObjective()
     {
+        objective.IsDone = false;
         await ObjectiveRepository.AddAsync(objective);
         Navigation.NavigateTo("/");
     }

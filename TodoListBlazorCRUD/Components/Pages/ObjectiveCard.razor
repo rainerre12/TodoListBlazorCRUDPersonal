@@ -1,0 +1,24 @@
+﻿@inject IObjectiveRepository ObjectiveRepository
+@inject NavigationManager Navigation
+
+<div class="objective-card">
+    <div class="objective-card-body">
+        <h5>@Objective.Title</h5>
+         Due by: @Objective.DueDate?.ToString("MMMM dd, yyyy")
+    </div>
+    <div class="actions">
+        <a href="@($"/edit/{Objective.Id}")"
+           class="btn btn-warning shadow-none">
+           Edit
+        </a>
+        
+    </div>
+
+</div>
+
+
+
+@code {
+    [Parameter]
+    public required Objective Objective { get; set; }
+}

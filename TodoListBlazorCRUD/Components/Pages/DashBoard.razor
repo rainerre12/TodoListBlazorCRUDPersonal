@@ -1,0 +1,46 @@
+﻿@page "/"
+@inject IObjectiveRepository Repository
+<PageTitle>
+    Dash Board
+</PageTitle>
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <a href="add-Objective"
+           class="btn btn-primary shadow-none mb-3">
+            Add Task
+        </a>
+        @if (objectives is null)
+        {
+            <div class="objective-item">
+                Loading registered list please wait.....
+            </div>
+        }
+        else if (objectives.Any())
+        {
+            @foreach (var objective in objectives)
+            {
+                <div class="objective-item">
+                </div>
+            }
+        }
+        else
+        {
+            <div class="objective-item">
+                No Task Added add now....
+            </div>
+        }
+
+
+    </div>
+</div>
+
+
+@code {
+    private List<Objective>? objectives;
+
+    protected override async Task OnInitializedAsync()
+    {
+        objectives = await Repository.GetAllAsync();
+    }
+}
